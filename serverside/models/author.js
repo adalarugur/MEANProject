@@ -7,4 +7,4 @@ var authorSchema = new mongoose.Schema({
     bio:String
 })
 
-module.exports = mongoose.module('Author',authorSchema)
+module.exports = mongoose.model('Author',authorSchema)

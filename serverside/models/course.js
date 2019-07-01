@@ -5,4 +5,4 @@ var courseSchema = new mongoose.Schema({
     author:{type:mongoose.Schema.Types.Objected,ref:'Author'}
 })
 
-module.exports = mongoose.module('Course',courseSchema)
+module.exports = mongoose.model('Course',courseSchema)
