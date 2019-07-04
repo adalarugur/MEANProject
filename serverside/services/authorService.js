@@ -1,5 +1,5 @@
 const express = require('express');
-const router = express.router;
+const router = express.Router();
 
 const Author = require('../models/author');
 
@@ -7,7 +7,7 @@ const Author = require('../models/author');
 
 
 
-router.post('/author',(request,response)=>{    
+router.post('/add',(request,response)=>{    
     let author = new Author(request.body)
     author.save((err,result)=>{
         if(err){
@@ -18,7 +18,11 @@ router.post('/author',(request,response)=>{
     });
 })
 
-router.get('/author',async(request,response)=>{
+router.get('/list',async(request,response)=>{
     let authors = await Author.find({},'-__v');
     response.send(authors)
 })
+
+var author = {router}
+
+module.exports = author;
