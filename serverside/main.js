@@ -18,7 +18,7 @@ app.post('/author',(request,response)=>{
     });
 })
 
-mongoose.connect('mongodb://adalar:a123fff@ds347467.mlab.com:47467/teacherbase', 
+mongoose.connect('mongodb://"":""@ds347467.mlab.com:47467/teacherbase', 
 {useNewUrlParser: true },err=>{
     if(!err){
         console.log("baglantı saglandı")
