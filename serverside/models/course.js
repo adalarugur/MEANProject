@@ -1,4 +1,4 @@
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
 var courseSchema = new mongoose.Schema({
     name:String,
