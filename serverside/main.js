@@ -18,7 +18,12 @@ app.post('/author',(request,response)=>{
     });
 })
 
-mongoose.connect('mongodb://"":""@ds347467.mlab.com:47467/teacherbase', 
+app.get('/author',async(request,response)=>{
+    let authors = await Author.find({},'-__v');
+    response.send(authors)
+})
+
+mongoose.connect('mongodb://adalar:a123fff@ds347467.mlab.com:47467/teacherbase', 
 {useNewUrlParser: true },err=>{
     if(!err){
         console.log("baglantı saglandı")
