@@ -18,7 +18,6 @@ app.post('/author',(request,response)=>{
     });
 })
 
-mongoose.connect('mongodb+srv://"":""@cluster0-0hwtx.mongodb.net/test?retryWrites=true&w=majority',
 mongoose.connect('mongodb://adalar:a123fff@ds347467.mlab.com:47467/teacherbase', 
 {useNewUrlParser: true },err=>{
     if(!err){
